@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Anthony Blanco Dev | Sitio en construcción</title>
+  <meta name="description" content="Building Modern Digital Solutions">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-principal: #0F172A;
+      --bg-secundario: #1E293B;
+      --acento: #22D3EE;
+      --texto: #E2E8F0;
+      --texto-suave: #94A3B8;
+    }
+    * { box-sizing: border-box; margin: 0; }
+    body {
+      min-height: 100svh;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+      background: var(--bg-principal);
+      color: var(--texto);
+      font-family: 'Inter', sans-serif;
+      text-align: center;
+    }
+    main { display: grid; gap: 28px; justify-items: center; }
+    img { width: min(90vw, 520px); height: auto; }
+    .estado {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 500;
+      font-size: 1.1rem;
+      padding: 10px 22px;
+      border: 1px solid var(--acento);
+      border-radius: 999px;
+      background: var(--bg-secundario);
+      color: var(--acento);
+    }
+    .nota { color: var(--texto-suave); font-size: 0.95rem; }
+  </style>
+</head>
+<body>
+  <main>
+    <img src="logo-completo.svg" alt="Logotipo de Anthony Blanco Dev: Building Modern Digital Solutions">
+    <p class="estado">Sitio en construcción</p>
+    <p class="nota">Muy pronto: mi portafolio de desarrollo web.</p>
+  </main>
+</body>
+</html>
