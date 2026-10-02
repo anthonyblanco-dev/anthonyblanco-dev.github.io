@@ -1,2 +1,2 @@
 # anthonyblanco-dev.github.io
-Portafolio Profesional Anthony Blanco
+Anthony Blanco Dev | Building Modern Digital Solutions
