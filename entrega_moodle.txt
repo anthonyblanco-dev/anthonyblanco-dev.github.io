@@ -1,0 +1,7 @@
+Portafolio web - Anthony Blanco Paniagua (Anthony Blanco Dev)
+
+URL del portafolio web:
+https://anthonyblanco-dev.github.io/proyecto/
+
+Repositorio (archivos del portafolio en la carpeta "proyecto"):
+https://github.com/anthonyblanco-dev/anthonyblanco-dev.github.io
