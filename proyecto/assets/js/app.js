@@ -246,14 +246,16 @@
      Mosaico que se enfoca (píxeles → imagen nítida)
      --------------------------------------------------------- */
   const LEVELS = [16, 10, 6, 3, 1];
+  let modal = false;
+  document.addEventListener("ab:modal", (e) => { modal = e.detail; if (!modal) $$(".tile").forEach((t) => t.dispatchEvent(new Event("ab:redraw"))); });
   function initTile(tile) {
     const img = $("img", tile), cv = $("canvas", tile);
     if (!img || !cv) return;
     const ctx = cv.getContext("2d"), off = document.createElement("canvas"), octx = off.getContext("2d");
     let idx = RM ? LEVELS.length - 1 : 0, goal = idx, timer = null, ok = false;
     const draw = () => {
-      if (!ok) return;
-      const dpr = Math.min(devicePixelRatio || 1, 2);
+      if (!ok || modal) return;
+      const dpr = Math.min(devicePixelRatio || 1, 1.5);
       const r = tile.getBoundingClientRect();
       const cw = Math.max(1, Math.round(r.width * dpr)), ch = Math.max(1, Math.round(r.height * dpr));
       if (cv.width !== cw || cv.height !== ch) { cv.width = cw; cv.height = ch; }
@@ -279,6 +281,7 @@
     cv.style.opacity = "0";
     if (img.complete && img.naturalWidth) ready(); else img.addEventListener("load", ready, { once: true });
     new ResizeObserver(draw).observe(tile);
+    tile.addEventListener("ab:redraw", draw);
     const fine = matchMedia("(hover: hover)").matches;
     tile.addEventListener("pointerenter", () => { if (fine) to(LEVELS.length - 1); });
     tile.addEventListener("pointerleave", () => { if (fine) to(0); });
@@ -306,7 +309,7 @@
     }));
 
     const dlg = $("#detail");
-    let opener = null, openId = null;
+    let opener = null, openId = null, closing = false;
     const fill = (id) => {
       const src = $(`.src[data-for="${id}"]`);
       const g = (k) => $(`[data-d="${k}"]`, src);
@@ -324,16 +327,33 @@
       const r = el.getBoundingClientRect();
       return `inset(${Math.max(0, r.top)}px ${Math.max(0, innerWidth - r.right)}px ${Math.max(0, innerHeight - r.bottom)}px ${Math.max(0, r.left)}px)`;
     };
+    const grid = $(".detail__grid", dlg);
+    const reveal = (frames, opts) => {
+      try { return grid.animate(frames, opts).finished; } catch (e) { return Promise.resolve(); }
+    };
     const openDetail = (id, el) => {
+      closing = false;
+      grid.getAnimations().forEach((a) => a.cancel());
       opener = el; openId = id; fill(id);
+      document.dispatchEvent(new CustomEvent("ab:modal", { detail: true }));
+      const from = rectClip(el);
       dlg.showModal(); dlg.scrollTop = 0; html.style.overflow = "hidden";
-      if (!RM) dlg.animate([{ clipPath: rectClip(el) }, { clipPath: "inset(0px 0px 0px 0px)" }], { duration: 460, easing: "steps(8, end)" });
-      $("#d-close").focus();
+      $("#d-close").focus({ preventScroll: true });
+      if (!RM) reveal([{ clipPath: from }, { clipPath: "inset(0px 0px 0px 0px)" }], { duration: 460, easing: "steps(8, end)" }).then(() => { grid.style.clipPath = ""; });
     };
     const closeDetail = () => {
-      const done = () => { dlg.close(); html.style.overflow = ""; openId = null; if (opener) opener.focus(); };
+      closing = true;
+      const done = () => {
+        if (!closing) return;
+        closing = false;
+        grid.getAnimations().forEach((a) => a.cancel()); grid.style.clipPath = ""; dlg.close(); html.style.overflow = ""; openId = null;
+        document.dispatchEvent(new CustomEvent("ab:modal", { detail: false }));
+        if (opener) opener.focus({ preventScroll: true });
+      };
       if (RM || !opener || !opener.isConnected || opener.closest("[hidden]")) return done();
-      dlg.animate([{ clipPath: "inset(0px 0px 0px 0px)" }, { clipPath: rectClip(opener) }], { duration: 360, easing: "steps(6, end)", fill: "forwards" }).finished.then(done);
+      const to = rectClip(opener);
+      reveal([{ clipPath: "inset(0px 0px 0px 0px)" }, { clipPath: to }], { duration: 360, easing: "steps(6, end)", fill: "forwards" }).then(done);
+      setTimeout(() => { if (closing) done(); }, 900);
     };
     $$(".tile", gallery).forEach((tl) => tl.addEventListener("click", () => openDetail(tl.dataset.pid, tl)));
     $("#d-close").addEventListener("click", closeDetail);
