@@ -14,6 +14,3 @@ window.AB_CONFIG = {
   },
 };
 
-/* CV en inglés: cuando subas assets/cv/CV_Imagen_Anthony_Blanco_EN.pdf, cambia a true
-   y el botón descargará esa versión al ver el sitio en inglés. */
-window.AB_CONFIG.cvEn = false;

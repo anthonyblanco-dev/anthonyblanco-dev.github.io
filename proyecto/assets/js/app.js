@@ -33,11 +33,7 @@
         el.setAttribute(a, l === "en" ? (EN[k] ?? el.__esa[a]) : el.__esa[a]);
       });
     });
-    const cv = $("[data-cv]");
-    if (cv) {
-      const en = l === "en" && ((window.AB_CONFIG || {}).cvEn === true);
-      cv.setAttribute("href", "assets/cv/CV_Imagen_Anthony_Blanco_" + (en ? "EN" : "ES") + ".pdf");
-    }
+    $$("[data-doc]").forEach((a) => a.setAttribute("href", a.dataset.doc.replace("{L}", l === "en" ? "EN" : "ES")));
     const sw = $(".lang");
     if (sw) {
       sw.dataset.lang = l;
