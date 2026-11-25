@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es" data-lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title data-i18n="t.projects">Proyectos | Anthony Blanco Dev</title>
+<meta name="description" content="Galería de proyectos web individuales y en equipo con ASP.NET MVC, Angular, Spring Boot y Node.js." data-i18n-attr="content:t.projects.d">
+<meta name="theme-color" content="#0F172A">
+<link rel="canonical" href="https://anthonyblanco-dev.github.io/proyecto/proyectos.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Proyectos | Anthony Blanco Dev">
+<meta property="og:description" content="Galería de proyectos web individuales y en equipo con ASP.NET MVC, Angular, Spring Boot y Node.js.">
+<meta property="og:url" content="https://anthonyblanco-dev.github.io/proyecto/proyectos.html">
+<meta property="og:image" content="https://anthonyblanco-dev.github.io/proyecto/promo.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/brand/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/brand/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="assets/brand/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="assets/brand/favicon-512.png">
+<link rel="preload" href="assets/fonts/space-grotesk-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/main.css">
+<script>
+try {
+  if (localStorage.getItem("ab-lang") === "en") { document.documentElement.lang = "en"; document.documentElement.dataset.lang = "en"; }
+  if (sessionStorage.getItem("ab-mosaic") && !matchMedia("(prefers-reduced-motion: reduce)").matches) document.documentElement.classList.add("is-entering");
+} catch (e) {}
+</script>
+
+</head>
+<body data-page="proyectos.html">
+<a data-i18n="skip" class="skip" href="#contenido">Saltar al contenido</a>
+
+<header class="site-head">
+  <a class="brand" href="index.html" aria-label="Anthony Blanco Dev, ir al inicio" data-i18n-attr="aria-label:brand.aria">
+    <img src="assets/brand/logo-monograma.svg" alt="" width="34" height="34">
+    <span>Anthony Blanco Dev</span>
+  </a>
+  <div class="head-tools">
+    <div class="lang" role="group" aria-label="Cambiar idioma" data-i18n-attr="aria-label:lang.aria" data-lang="es">
+      <button type="button" data-set-lang="es" lang="es" aria-pressed="true" aria-label="Español">ES</button>
+      <button type="button" data-set-lang="en" lang="en" aria-pressed="false" aria-label="English">EN</button>
+    </div>
+    <a class="key key--sm" href="assets/cv/CV_Imagen_Anthony_Blanco_ES.pdf" data-doc="assets/cv/CV_Imagen_Anthony_Blanco_{L}.pdf" download><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11M6 10.5 12 16.5l6-6M5 20h14" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square"/></svg><span class="cv-long" data-i18n="cv.dl">Descargar CV</span><span class="cv-short" data-i18n="cv.dl2">CV</span></a>
+  </div>
+</header>
+
+<nav class="rail" aria-label="Navegación principal" data-i18n-attr="aria-label:nav.aria">
+  <ul><li><a href="index.html" data-i18n="nav.home">Inicio</a></li><li><a href="servicios.html" data-i18n="nav.services">Servicios</a></li><li><a href="proyectos.html" aria-current="page" data-i18n="nav.projects">Proyectos</a></li><li><a href="sobre-mi.html" data-i18n="nav.about">Sobre mí</a></li><li><a href="contacto.html" data-i18n="nav.contact">Contacto</a></li></ul><span class="marker" aria-hidden="true"></span>
+</nav>
+
+<main id="contenido" tabindex="-1">
+
+<header class="page-head stack">
+  <h1 class="h-xl" style="max-width:12ch" data-i18n="pr.h1">Cosas que he construido.</h1>
+  <p data-i18n="pr.lead" class="lead">Trabajos individuales y en equipo. Enfoca un proyecto y ábrelo para ver su detalle y las tecnologías que usé.</p>
+</header>
+<section aria-labelledby="h-gal">
+  <h2 id="h-gal" class="sr-only" data-i18n="pr.gal">Galería de proyectos</h2>
+  <div class="filters" role="group" aria-label="Filtrar proyectos" data-i18n-attr="aria-label:pr.filter">
+    <span class="filters__t" data-i18n="pr.show">Mostrar:</span>
+    <button class="chip" type="button" data-filter="all" aria-pressed="true" data-i18n="pr.all">Todos</button>
+    <button class="chip" type="button" data-filter="individual" aria-pressed="false" data-i18n="kind.individual.f">Individuales</button>
+    <button class="chip" type="button" data-filter="team" aria-pressed="false" data-i18n="kind.team.f">En equipo</button>
+  </div>
+  <div class="gallery" id="gallery"><div class="cell" data-id="wealthify" data-kind="individual"><button class="tile" type="button" data-pid="wealthify" aria-haspopup="dialog"><img src="assets/img/proyectos/wealthify.webp" alt="Panel de Wealthify con gráfico de rendimiento y lista de acciones" data-i18n-attr="alt:p.wealthify.alt" width="1200" height="800" loading="lazy" decoding="async"><canvas aria-hidden="true"></canvas><span class="tile__info"><span class="tile__tag" data-i18n="kind.individual">Individual</span><span class="tile__name">Wealthify</span><span class="tile__tech">ASP.NET MVC, C#, SQL Server, JavaScript</span></span><span class="tile__hint"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5H5v4M15 19h4v-4M5 5l5.5 5.5M19 19l-5.5-5.5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square"/></svg></span></button><div class="src" hidden data-for="wealthify"><span data-d="title">Wealthify</span><span data-d="desc" data-i18n="p.wealthify.desc">Plataforma de inversión para comprar y gestionar acciones de EE. UU. Desarrollé APIs REST en ASP.NET MVC y SQL Server, con autenticación funcional y un panel de administración.</span><span data-d="tech">ASP.NET MVC|C#|SQL Server|JavaScript|HTML5|CSS3</span><span data-d="kind" data-i18n="kind.individual">Individual</span><span data-d="links"></span></div></div><div class="cell" data-id="focuskids" data-kind="team"><button class="tile" type="button" data-pid="focuskids" aria-haspopup="dialog"><img src="assets/img/proyectos/focuskids.webp" alt="Juego de memoria de FocusKids con tarjetas de colores" data-i18n-attr="alt:p.focuskids.alt" width="1200" height="800" loading="lazy" decoding="async"><canvas aria-hidden="true"></canvas><span class="tile__info"><span class="tile__tag" data-i18n="kind.team">En equipo</span><span class="tile__name">FocusKids</span><span class="tile__tech">Angular, Spring Boot, JavaScript, HTML5</span></span><span class="tile__hint"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5H5v4M15 19h4v-4M5 5l5.5 5.5M19 19l-5.5-5.5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square"/></svg></span></button><div class="src" hidden data-for="focuskids"><span data-d="title">FocusKids</span><span data-d="desc" data-i18n="p.focuskids.desc">Aplicación web con juegos cognitivos para niños con TDAH y otras condiciones del neurodesarrollo. Interfaces intuitivas y componentes reutilizables en Angular que facilitan agregar nuevas actividades. Trabajo en equipo con Scrum y Git Flow.</span><span data-d="tech">Angular|Spring Boot|JavaScript|HTML5|CSS3|Scrum|Git Flow</span><span data-d="kind" data-i18n="kind.team">En equipo</span><span data-d="links"><a class="key key--sm" href="https://github.com/GeraldDM21/focuskids-frontend" target="_blank" rel="noopener" data-i18n="link.front">Repositorio del frontend</a><a class="key key--sm" href="https://github.com/GeraldDM21/focuskids-backend" target="_blank" rel="noopener" data-i18n="link.back">Repositorio del backend</a></span></div></div><div class="cell" data-id="pelis" data-kind="team"><button class="tile" type="button" data-pid="pelis" aria-haspopup="dialog"><img src="assets/img/proyectos/pelis.webp" alt="Catálogo de películas con pósters de colores" data-i18n-attr="alt:p.pelis.alt" width="1200" height="800" loading="lazy" decoding="async"><canvas aria-hidden="true"></canvas><span class="tile__info"><span class="tile__tag" data-i18n="kind.team">En equipo</span><span class="tile__name">PELIS-MVC-WEB</span><span class="tile__tech">Node.js, Express, MVC, JavaScript</span></span><span class="tile__hint"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5H5v4M15 19h4v-4M5 5l5.5 5.5M19 19l-5.5-5.5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square"/></svg></span></button><div class="src" hidden data-for="pelis"><span data-d="title">PELIS-MVC-WEB</span><span data-d="desc" data-i18n="p.pelis.desc">Catálogo de películas con arquitectura MVC, construido en equipo con Node.js y Express para gestionar el listado.</span><span data-d="tech">Node.js|Express|MVC|JavaScript</span><span data-d="kind" data-i18n="kind.team">En equipo</span><span data-d="links"><a class="key key--sm" href="https://github.com/olazochavesaxel/ProyectoMVC" target="_blank" rel="noopener" data-i18n="link.repo">Ver repositorio</a></span></div></div><div class="cell" data-id="lab1" data-kind="individual"><button class="tile" type="button" data-pid="lab1" aria-haspopup="dialog"><img src="assets/img/proyectos/laboratorio.webp" alt="Respuesta JSON de una API junto a una tabla en Angular" data-i18n-attr="alt:p.lab1.alt" width="1200" height="800" loading="lazy" decoding="async"><canvas aria-hidden="true"></canvas><span class="tile__info"><span class="tile__tag" data-i18n="kind.individual">Individual</span><span class="tile__name" data-i18n="p.lab1.title">Laboratorio 1</span><span class="tile__tech">Spring Boot, Docker, Postman, Angular</span></span><span class="tile__hint"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5H5v4M15 19h4v-4M5 5l5.5 5.5M19 19l-5.5-5.5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square"/></svg></span></button><div class="src" hidden data-for="lab1"><span data-d="title" data-i18n="p.lab1.title">Laboratorio 1</span><span data-d="desc" data-i18n="p.lab1.desc">Backend en Spring Boot que corre en Docker, con una colección de Postman para probar la API, y un frontend en Angular que la consume.</span><span data-d="tech">Spring Boot|Docker|Postman|Angular</span><span data-d="kind" data-i18n="kind.individual">Individual</span><span data-d="links"><a class="key key--sm" href="https://github.com/Tonybp220905/Laboratiorio1-Proyecto3" target="_blank" rel="noopener" data-i18n="link.back">Repositorio del backend</a><a class="key key--sm" href="https://github.com/Tonybp220905/Lab2-Frontend" target="_blank" rel="noopener" data-i18n="link.front">Repositorio del frontend</a></span></div></div><div class="cell" data-id="portfolio" data-kind="individual"><button class="tile" type="button" data-pid="portfolio" aria-haspopup="dialog"><img src="assets/img/proyectos/portafolio.webp" alt="Portada de este portafolio" data-i18n-attr="alt:p.portfolio.alt" width="1200" height="800" loading="lazy" decoding="async"><canvas aria-hidden="true"></canvas><span class="tile__info"><span class="tile__tag" data-i18n="kind.individual">Individual</span><span class="tile__name">Anthony Blanco Dev</span><span class="tile__tech">HTML5, CSS3, JavaScript, EmailJS</span></span><span class="tile__hint"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5H5v4M15 19h4v-4M5 5l5.5 5.5M19 19l-5.5-5.5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square"/></svg></span></button><div class="src" hidden data-for="portfolio"><span data-d="title">Anthony Blanco Dev</span><span data-d="desc" data-i18n="p.portfolio.desc">Este sitio: programado desde cero, sin plantillas ni frameworks. Transiciones en mosaico, galería que se enfoca, formulario como frase y cambio de idioma entre español e inglés.</span><span data-d="tech">HTML5|CSS3|JavaScript|EmailJS</span><span data-d="kind" data-i18n="kind.individual">Individual</span><span data-d="links"><a class="key key--sm" href="https://github.com/anthonyblanco-dev/anthonyblanco-dev.github.io" target="_blank" rel="noopener" data-i18n="link.repo">Ver repositorio</a></span></div></div></div>
+  <p id="gal-status" class="sr-only" aria-live="polite"></p>
+</section>
+<dialog class="detail" id="detail" aria-labelledby="d-title">
+  <button class="key key--sm detail__close" type="button" id="d-close" data-i18n="det.close">Cerrar proyecto</button>
+  <div class="detail__grid">
+    <div class="detail__img"><img id="d-img" src="" alt="" width="1200" height="800"></div>
+    <div class="detail__body">
+      <p class="detail__meta" id="d-kind"></p>
+      <h2 id="d-title"></h2>
+      <p class="lead" id="d-desc"></p>
+      <div><p class="detail__meta" data-i18n="det.tech" style="margin-bottom:10px">Tecnologías</p><ul class="detail__tech" id="d-tech"></ul></div>
+      <div class="detail__actions" id="d-links"></div>
+    </div>
+  </div>
+</dialog>
+
+<footer class="site-foot">
+  <div class="foot__grid">
+    <div class="foot__brand">
+      <img src="assets/brand/logo-horizontal.svg" alt="Anthony Blanco Dev" width="150" height="36" loading="lazy">
+      <p data-i18n="foot.tag">Desarrollo web freelance desde Costa Rica.</p>
+    </div>
+    <div class="foot__col">
+      <h2 data-i18n="foot.pages">Páginas</h2>
+      <ul><li><a class="link" href="index.html" data-i18n="nav.home">Inicio</a></li><li><a class="link" href="servicios.html" data-i18n="nav.services">Servicios</a></li><li><a class="link" href="proyectos.html" data-i18n="nav.projects">Proyectos</a></li><li><a class="link" href="sobre-mi.html" data-i18n="nav.about">Sobre mí</a></li><li><a class="link" href="contacto.html" data-i18n="nav.contact">Contacto</a></li></ul>
+    </div>
+    <div class="foot__col">
+      <h2 data-i18n="foot.contact">Contacto</h2>
+      <ul>
+        <li><a class="link" href="mailto:anthonyblancop0@gmail.com">anthonyblancop0@gmail.com</a></li>
+        <li><a class="link" href="https://wa.me/50670056174" target="_blank" rel="noopener">WhatsApp +506 7005-6174</a></li>
+        <li><a class="link" href="https://github.com/anthonyblanco-dev" target="_blank" rel="noopener">GitHub</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot__legal">
+    <span data-i18n="foot.legal">© 2026 Anthony Blanco Dev. Hecho a mano con HTML, CSS y JavaScript, sin plantillas.</span>
+    <span>Building Modern Digital Solutions</span>
+  </div>
+</footer>
+</main>
+
+<div class="float">
+  <div class="wa-panel" id="wa-panel" role="dialog" aria-modal="false" aria-label="Chat de WhatsApp" data-i18n-attr="aria-label:wa.aria">
+    <button class="wa-close" type="button" aria-label="Cerrar chat" data-i18n-attr="aria-label:wa.close">&times;</button>
+    <div class="wa-panel__head"><img src="assets/brand/favicon.svg" alt="" width="34" height="34"><div><b>Anthony Blanco</b><small data-i18n="wa.sub">Responde por WhatsApp</small></div></div>
+    <div class="wa-panel__body">
+      <div data-i18n="wa.hi" class="wa-bubble">Hola, soy Anthony. Cuéntame qué necesitas y seguimos la conversación por WhatsApp.</div>
+      <label class="sr-only" for="wa-text" data-i18n="wa.label">Tu mensaje</label>
+      <textarea id="wa-text" rows="3" placeholder="Escribe tu mensaje" data-i18n-attr="placeholder:wa.ph"></textarea>
+      <button class="key key--sm" type="button" id="wa-send"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5C6.7 2.5 2.5 6.4 2.5 11.2c0 2 .8 3.9 2.1 5.4L3.6 21.5l4.9-1.7c1.1.4 2.3.6 3.5.6 5.3 0 9.5-3.9 9.5-8.7S17.300 2.500 12 2.500z" fill="currentColor"/><circle cx="8" cy="11.3" r="1.35" fill="var(--dot,#0F172A)"/><circle cx="12" cy="11.3" r="1.35" fill="var(--dot,#0F172A)"/><circle cx="16" cy="11.3" r="1.35" fill="var(--dot,#0F172A)"/></svg><span data-i18n="wa.send">Abrir WhatsApp</span></button>
+    </div>
+  </div>
+  <button class="fab fab--top" type="button" id="to-top" aria-label="Volver arriba" data-i18n-attr="aria-label:top.aria">
+    <svg class="ring" viewBox="0 0 58 58" aria-hidden="true"><rect x="1.500" y="1.500" width="55" height="55" rx="14" pathLength="100" stroke-dasharray="100" stroke-dashoffset="100"/></svg>
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V6M5.5 11.5 12 5l6.5 6.5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square"/></svg>
+  </button>
+  <button class="fab fab--wa" type="button" id="wa-open" aria-expanded="false" aria-controls="wa-panel" aria-label="Abrir chat de WhatsApp" data-i18n-attr="aria-label:wa.open"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5C6.7 2.5 2.5 6.4 2.5 11.2c0 2 .8 3.9 2.1 5.4L3.6 21.5l4.9-1.7c1.1.4 2.3.6 3.5.6 5.3 0 9.5-3.9 9.5-8.7S17.300 2.500 12 2.500z" fill="currentColor"/><circle cx="8" cy="11.3" r="1.35" fill="var(--dot,#0F172A)"/><circle cx="12" cy="11.3" r="1.35" fill="var(--dot,#0F172A)"/><circle cx="16" cy="11.3" r="1.35" fill="var(--dot,#0F172A)"/></svg></button>
+</div>
+
+<div class="mosaic" id="mosaic" hidden aria-hidden="true"></div>
+<script src="assets/js/i18n.js"></script>
+<script src="assets/js/config.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>
