@@ -33,6 +33,11 @@
         el.setAttribute(a, l === "en" ? (EN[k] ?? el.__esa[a]) : el.__esa[a]);
       });
     });
+    const cv = $("[data-cv]");
+    if (cv) {
+      const en = l === "en" && ((window.AB_CONFIG || {}).cvEn === true);
+      cv.setAttribute("href", "assets/cv/CV_Imagen_Anthony_Blanco_" + (en ? "EN" : "ES") + ".pdf");
+    }
     const sw = $(".lang");
     if (sw) {
       sw.dataset.lang = l;
@@ -41,7 +46,7 @@
     if (animate && !RM) {
       const m = $("main");
       m.classList.remove("lang-swap"); void m.offsetWidth; m.classList.add("lang-swap");
-      setTimeout(() => m.classList.remove("lang-swap"), 320);
+      setTimeout(() => m.classList.remove("lang-swap"), 200);
     }
     document.dispatchEvent(new CustomEvent("ab:lang"));
   }

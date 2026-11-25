@@ -122,6 +122,7 @@ window.AB_EN = {
  "link.repo": "View repository",
  "p.lab1.desc": "Spring Boot backend running in Docker, with a Postman collection to test the API, and an Angular frontend that consumes it.",
  "p.lab1.alt": "JSON response from an API next to an Angular table",
+ "p.lab1.title": "Lab 1",
  "p.portfolio.desc": "This website: coded from scratch, with no templates or frameworks. Mosaic transitions, a gallery that comes into focus, a form written as a sentence and a Spanish/English switch.",
  "p.portfolio.alt": "Home page of this portfolio",
  "pr.lead": "Solo and team projects. Bring a project into focus and open it to see the details and the technologies I used.",
