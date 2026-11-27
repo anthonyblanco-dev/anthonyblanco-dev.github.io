@@ -243,9 +243,9 @@ main { padding: calc(var(--head-h) + clamp(36px, 7vh, 88px)) var(--gutter) 0 cal
   background: #f8fafc; border-radius: 6px; padding: 4px 12px; font-size: .78rem; color: #475569; min-height: 26px; overflow: hidden;
 }
 .win-url .lock { width: 9px; height: 9px; border-radius: 2px; background: #cbd5e1; flex: none; transition: background .4s var(--step); }
-.win-url .url-t { white-space: nowrap; opacity: .35; transition: opacity .4s var(--step); }
+.win-url .url-t { white-space: nowrap; color: #64748b; transition: color .4s var(--step); }
 .builder[data-stage="4"] .lock { background: #16a34a; }
-.builder[data-stage="4"] .url-t { opacity: 1; color: #0f172a; }
+.builder[data-stage="4"] .url-t { color: #0f172a; }
 
 .site { position: relative; padding: 14px; display: grid; grid-template-columns: minmax(0, 1fr); gap: 12px; min-height: 380px; align-content: start; }
 .site * { transition: background-color .45s var(--step), color .45s var(--step), outline-color .45s var(--step), opacity .45s var(--step), transform .45s var(--step), border-color .45s var(--step); }
