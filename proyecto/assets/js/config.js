@@ -8,9 +8,9 @@
    Mientras estén vacías, el formulario abre tu correo con el mensaje ya armado (mailto). */
 window.AB_CONFIG = {
   emailjs: {
-    publicKey: "",
-    serviceId: "",
-    templateId: "",
+    publicKey: "ZKpgpLdoxvLvpGdME",
+    serviceId: "service_yk2itlw",
+    templateId: "template_73pd1px",
   },
 };
 
